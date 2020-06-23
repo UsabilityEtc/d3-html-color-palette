@@ -10,7 +10,5 @@ function renderPalette(data) {
                 .style("background-color", d => d.Name)
             .append("div")
                 .html(d => `<p>${d.Name}</p><p>${d.Hex}</p>`)
-                .style("color", d => {
-                    return d3.hsl(d.Name).l >= 0.5 ? "black" : "white"
-                })
+                .style("color", d => d3.hsl(d.Name).l >= 0.5 ? "black" : "white")
 }
